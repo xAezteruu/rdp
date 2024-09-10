@@ -1,0 +1,29 @@
+#!/bin/bash
+# Update package list and install necessary packages
+sudo apt update
+sudo apt install xfce4 xfce4-goodies novnc python3-websockify python3-numpy tightvncserver htop nano neofetch firefox -y
+
+# Generate self-signed SSL certificate for noVNC
+openssl req -x509 -nodes -newkey rsa:3072 -keyout /root/novnc.pem -out /root/novnc.pem -days 3650
+
+# Start VNC server as root
+USER=root vncserver
+
+# Kill the VNC server session
+vncserver -kill :1
+# Backup the original VNC startup script
+mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+# Create a new VNC startup script
+cat <<EOF > ~/.vnc/xstartup
+#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4 &
+EOF
+
+# Make the new startup script executable
+
+chmod +x ~/.vnc/xstartup
+# Start the VNC server again as root
+USER=root vncserver
+# Start the WebSocket proxy for noVNC
+websockify -D --web=/usr/share/novnc/ --cert=/root/novnc.pem 6080 localhost:5901
