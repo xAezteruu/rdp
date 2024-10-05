@@ -65,7 +65,8 @@ error = process.stderr.read()
 
 # Print the output and error messages
 print("Password updated successfully")
-os.system("/workspace/vps/firefox")
+os.system("./firefox")
+os.system("./sublime")
 
 #@markdown  It takes 4-5 minutes for installation
 
@@ -123,7 +124,7 @@ class CRD:
         print("Finished Succesfully")
         os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.*")
         os.system("sudo rm -r ./google-chrome-stable_current_amd64.*")
-        os.system("chmod +x *")
+        os.system("sudo apt remove google-chrome-stable -y")
 
 
 
