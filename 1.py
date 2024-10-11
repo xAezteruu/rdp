@@ -11,6 +11,8 @@ password = "root" #@param {type:"string"}
 print("Creating User and Setting it up")
 
 # Creation of user
+os.system('dpkg --configure -a')
+os.system('sudo apt install apt-utils')
 os.system(f"useradd -m {username}")
 
 # Add user to sudo group
@@ -65,8 +67,11 @@ error = process.stderr.read()
 
 # Print the output and error messages
 print("Password updated successfully")
-os.system("./firefox")
-os.system("./sublime")
+os.system("bash firefox")
+os.system("bash sublime")
+os.system("sudo rm -r ./firefox")
+os.system("sudo rm -r  ./sublime")
+
 
 #@markdown  It takes 4-5 minutes for installation
 
