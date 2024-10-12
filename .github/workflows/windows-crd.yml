@@ -17,9 +17,10 @@ jobs:
 
     - name: Install Google Chrome
       run: |
-        echo "Mengunduh dan menginstal Google Chrome"
-        curl -O https://dl.google.com/chrome/install/latest/chrome_installer.exe
-        start chrome_installer.exe /install
+        echo "Mengunduh dan menginstal Google Chrome menggunakan PowerShell"
+        $chromeInstaller = "$env:TEMP\\chrome_installer.exe"
+        Invoke-WebRequest "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile $chromeInstaller
+        Start-Process $chromeInstaller -ArgumentList "/silent", "/install" -NoNewWindow -Wait
         echo "Google Chrome berhasil diinstal"
 
     - name: Install Chrome Remote Desktop
