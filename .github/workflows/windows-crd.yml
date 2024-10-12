@@ -18,7 +18,7 @@ jobs:
     - name: Install Google Chrome
       run: |
         echo "Mengunduh dan menginstal Google Chrome menggunakan PowerShell"
-        $chromeInstaller = "$env:TEMP\\chrome_installer.exe"
+        $chromeInstaller = "$env:TEMP\chrome_installer.exe"
         Invoke-WebRequest "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile $chromeInstaller
         Start-Process $chromeInstaller -ArgumentList "/silent", "/install" -NoNewWindow -Wait
         echo "Google Chrome berhasil diinstal"
@@ -33,9 +33,9 @@ jobs:
     - name: Start Chrome Remote Desktop with Authcode
       run: |
         echo "Memulai Chrome Remote Desktop dengan authcode"
-        "%PROGRAMFILES(X86)%\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" ^
-        --code="4/0AVG7fiTdS6DxYA4PsYvM66DW6f7FbimL0kTZ4SiCK5sz7xQSrlGzSCYpWanvNqbrNFpGUQ" ^
-        --redirect-url="https://remotedesktop.google.com/_/oauthredirect" ^
+        & "%PROGRAMFILES(X86)%\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" `
+        --code="4/0AVG7fiTdS6DxYA4PsYvM66DW6f7FbimL0kTZ4SiCK5sz7xQSrlGzSCYpWanvNqbrNFpGUQ" `
+        --redirect-url="https://remotedesktop.google.com/_/oauthredirect" `
         --name=%COMPUTERNAME%
         echo "Chrome Remote Desktop berhasil dijalankan dengan user Aezteru"
 
