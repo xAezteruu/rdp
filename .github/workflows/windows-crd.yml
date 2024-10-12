@@ -10,32 +10,35 @@ jobs:
     steps:
     - name: Buat User Aezteru
       run: |
+        echo "Membuat user Aezteru"
         net user Aezteru /add
         net localgroup administrators Aezteru /add
         echo "User Aezteru berhasil dibuat dan ditambahkan ke grup administrator"
 
     - name: Install Google Chrome
       run: |
+        echo "Mengunduh dan menginstal Google Chrome"
         curl -O https://dl.google.com/chrome/install/latest/chrome_installer.exe
-        start chrome_installer.exe /silent /install
-        echo "Google Chrome installed"
+        start chrome_installer.exe /install
+        echo "Google Chrome berhasil diinstal"
 
     - name: Install Chrome Remote Desktop
       run: |
-        echo "Installing Chrome Remote Desktop"
+        echo "Mengunduh dan menginstal Chrome Remote Desktop"
         curl -O https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-        start chrome-remote-desktop_current_amd64.deb /silent /install
+        start chrome-remote-desktop_current_amd64.deb /install
+        echo "Chrome Remote Desktop berhasil diinstal"
 
     - name: Start Chrome Remote Desktop with Authcode
       run: |
-        echo "Starting Chrome Remote Desktop with authcode"
+        echo "Memulai Chrome Remote Desktop dengan authcode"
         "%PROGRAMFILES(X86)%\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" ^
         --code="4/0AVG7fiTdS6DxYA4PsYvM66DW6f7FbimL0kTZ4SiCK5sz7xQSrlGzSCYpWanvNqbrNFpGUQ" ^
         --redirect-url="https://remotedesktop.google.com/_/oauthredirect" ^
         --name=%COMPUTERNAME%
-        echo "Chrome Remote Desktop started with user Aezteru and authcode"
+        echo "Chrome Remote Desktop berhasil dijalankan dengan user Aezteru"
 
     - name: Keep the session alive
       run: |
-        echo "Keeping the session alive for 24 hours"
+        echo "Menjaga sesi tetap aktif selama 24 jam"
         timeout /t 86400
