@@ -1,46 +1,19 @@
-name: Windows VPS with Chrome Remote Desktop
+name: Run SSHX
 
-on:
-  workflow_dispatch: # Menjalankan workflow secara manual
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  setup-vps:
-    runs-on: windows-latest # Menggunakan runner Windows
-
+  sshx:
+    runs-on: ubuntu-latest
+    
     steps:
-    - name: Buat User Aezteru
-      run: |
-        echo "Membuat user Aezteru"
-        net user Aezteru /add
-        net localgroup administrators Aezteru /add
-        echo "User Aezteru berhasil dibuat dan ditambahkan ke grup administrator"
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-    - name: Install Google Chrome
+    - name: Run SSHX
       run: |
-        echo "Mengunduh dan menginstal Google Chrome menggunakan PowerShell"
-        $chromeInstaller = "$env:TEMP\chrome_installer.exe"
-        Invoke-WebRequest "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile $chromeInstaller
-        Start-Process $chromeInstaller -ArgumentList "/silent", "/install" -NoNewWindow -Wait
-        echo "Google Chrome berhasil diinstal"
-
-    - name: Install Chrome Remote Desktop
-      run: |
-        echo "Mengunduh dan menginstal Chrome Remote Desktop"
-        curl -O https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-        start chrome-remote-desktop_current_amd64.deb /install
-        echo "Chrome Remote Desktop berhasil diinstal"
-
-    - name: Start Chrome Remote Desktop with Authcode
-      run: |
-        echo "Memulai Chrome Remote Desktop dengan authcode"
-        $chromeRemoteDesktopPath = Join-Path $Env:PROGRAMFILES "Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe"
-        & $chromeRemoteDesktopPath `
-        --code="4/0AVG7fiTdS6DxYA4PsYvM66DW6f7FbimL0kTZ4SiCK5sz7xQSrlGzSCYpWanvNqbrNFpGUQ" `
-        --redirect-url="https://remotedesktop.google.com/_/oauthredirect" `
-        --name=$Env:COMPUTERNAME
-        echo "Chrome Remote Desktop berhasil dijalankan dengan user Aezteru"
-
-    - name: Keep the session alive
-      run: |
-        echo "Menjaga sesi tetap aktif selama 24 jam"
-        timeout /t 86400
+        curl -sSf https://sshx.io/get | sh -s run
