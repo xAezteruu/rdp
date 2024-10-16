@@ -67,9 +67,7 @@ error = process.stderr.read()
 
 # Print the output and error messages
 print("Password updated successfully")
-os.system("bash firefox")
 os.system("bash sublime")
-os.system("sudo rm -r ./firefox")
 os.system("sudo rm -r  ./sublime")
 
 
@@ -113,11 +111,17 @@ class CRD:
         os.system("systemctl disable lightdm.service")
 
     @staticmethod
-    def installGoogleChorme():
-        print("Installing Goo"+"gle Chro"+"me")
-        subprocess.run(["wget", ''.join(['h', 't', 't', 'p', 's', ':', '/', '/', 'd', 'l', '.', 'g', 'o', 'o', 'g', 'l', 'e', '.', 'c', 'o', 'm', '/', 'l', 'i', 'n', 'u', 'x', '/', 'd', 'i', 'r', 'e', 'c', 't', '/', 'g', 'o', 'o', 'g', 'l', 'e', '-', 'c', 'h', 'r', 'o', 'm', 'e', '-', 's', 't', 'a', 'b', 'l', 'e', '_', 'c', 'u', 'r', 'r', 'e', 'n', 't', '_', 'a', 'm', 'd', '6', '4', '.', 'd', 'e', 'b'])], stdout=subprocess.PIPE)
-        subprocess.run(["dpkg", "--install", ''.join(['g', 'o', 'o', 'g', 'l', 'e', '-', 'c', 'h', 'r', 'o', 'm', 'e', '-', 's', 't', 'a', 'b', 'l', 'e', '_', 'c', 'u', 'r', 'r', 'e', 'n', 't', '_', 'a', 'm', 'd', '6', '4', '.', 'd', 'e', 'b'])], stdout=subprocess.PIPE)
-        subprocess.run(['apt', 'install', '--assume-yes', '--fix-broken'], stdout=subprocess.PIPE)
+def installGoogleChorme():
+    print("Installing Goo"+"gle Chro"+"me via Flatpak")
+    
+    # Install Flatpak if not already installed
+    os.system("sudo apt install flatpak -y")
+    
+    # Add Flathub repository for Flatpak
+    os.system("sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
+    
+    # Install Google Chrome via Flatpak
+    os.system("flatpak install flathub com.google.Chrome -y")
 
     @staticmethod
     def finish(user):
@@ -129,7 +133,6 @@ class CRD:
         print("Finished Succesfully")
         os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.*")
         os.system("sudo rm -r ./google-chrome-stable_current_amd64.*")
-        os.system("sudo apt remove google-chrome-stable -y")
 
 
 
