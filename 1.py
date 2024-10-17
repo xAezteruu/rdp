@@ -111,17 +111,11 @@ class CRD:
         os.system("systemctl disable lightdm.service")
 
     @staticmethod
-def installGoogleChorme():
-    print("Installing Goo"+"gle Chro"+"me via Flatpak")
-    
-    # Install Flatpak if not already installed
-    os.system("sudo apt install flatpak -y")
-    
-    # Add Flathub repository for Flatpak
-    os.system("sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
-    
-    # Install Google Chrome via Flatpak
-    os.system("flatpak install flathub com.google.Chrome -y")
+    def installGoogleChorme():
+        print("Installing Goo"+"gle Chro"+"me via Flatpak")
+        os.system("sudo apt install flatpak -y")
+        os.system("sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
+        os.system("flatpak install flathub com.google.Chrome -y")
 
     @staticmethod
     def finish(user):
