@@ -1,5 +1,5 @@
 while true; do
    clear
-   curl -m 5 https://congenial-space-pancake-69rwwxw4gg7vcr97x.github.dev/
+   curl -m 5 YOUR_GITHUB_CODESPACE_LINK_OR_GITPOD
    sleep 300
 done
