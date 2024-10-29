@@ -125,9 +125,6 @@ class CRD:
         os.system("clear")
         os.system("bash ka")
 
-
-
-
 try:
     if CRP == "":
         print("Please enter authcode from the given link")
