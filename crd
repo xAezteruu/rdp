@@ -1,2 +1,0 @@
-sudo su - Aezteru -c service chrome-remote-desktop start
-exit
