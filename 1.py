@@ -1,12 +1,10 @@
-
-#@title **RDP**
-#@markdown Enter Username and Password
+username = "Aezteru"
+password = "root"
+Pin = 333333
 
 import os
 import subprocess
 
-username = "Aezteru" #@param {type:"string"}
-password = "root" #@param {type:"string"}
 
 print("Creating User and Setting it up")
 
@@ -30,7 +28,7 @@ print(f"User created and configured having username `{username}` and password `{
 subprocess.run(["sudo", "adduser", "--disabled-password", username])
 
 # Grant read, write, and delete permissions to the user for a specific directory
-directory_path = "/home/user"
+directory_path = "/home/{username}"
 subprocess.run(["sudo", "chmod", "-R", "777", directory_path])
 
 
@@ -67,9 +65,6 @@ error = process.stderr.read()
 
 # Print the output and error messages
 print("Password updated successfully")
-os.system("bash sublime")
-os.system("sudo rm -r  ./sublime")
-
 
 #@markdown  It takes 4-5 minutes for installation
 
@@ -79,10 +74,9 @@ import subprocess
 
 CRP = f"''.join({list(input('Enter the code copy from the go'+'ogle Rem'+'ote desk'+'top: '))})"
 CRP = eval(CRP)
-#@markdown Enter a Pin (more or equal to 6 digits)
-Pin = 333333 #@param {type: "integer"}
-time = 999999999999 #@param {type: "integer"}
-codelink = "DISPLAY= /opt/google/chrome-remote-desktop/start-host --code=\"4/0AQlEd8zoYdtgc0YHzwftKZrUUP4j14kwFOhim-dPmwLOFwXw8rLpARya1cklrhqPcpUzEw\" --redirect-url=\"https://remotedesktop.google.com/_/oauthredirect\" --name=$(hostname)" #@param {type: "string"}
+
+os.system("bash sublime")
+os.system("sudo rm -r  ./sublime")
 
 class CRD:
     def __init__(self, user):
