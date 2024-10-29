@@ -30,10 +30,5 @@ sudo python3 1.py
 ```
 ## Star History
 
-<a href="https://star-history.com/#Perusapw/desktop&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Perusapw/desktop&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Perusapw/desktop&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Perusapw/desktop&type=Date" />
- </picture>
+[![Star History Chart](https://api.star-history.com/svg?repos=Perusapw/rdp&type=Date)](https://star-history.com/#Perusapw/rdp&Date)ure>
 </a>
