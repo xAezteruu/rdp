@@ -11,15 +11,16 @@ cd crd
 ```
 
 # Configuring
+**Dont Touch [.bashrc.example](https://github.com/Perusapw/rdp/blob/main/.bashrc.example)**  
 edit 3 of first line
 ```python
 username = "YOUR_DESKTOP_USERNAME"
 password = "YOUR_PASSWORD"
 pin = "YOUR_CHROME_REMOTE_DESKTOP_PIN"
 ```
-***Optional**
-If You not using github codespace
-delete line containing
+***Optional**  
+If You not using github codespace  
+delete line contain
 ```python
 os.system("bash ka")
 ```
