@@ -119,9 +119,9 @@ class CRD:
         os.system(f"su - {user} -c '{command}'")
         os.system("service chr"+"ome-re"+"mote-de"+"sktop start")
         print("Finished Succesfully")
+        os.system(f"sudo mv .bashrc.example /home/{username}/.bashrc")
         os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.*")
-        os.system("sudo rm -r ./google-chrome-stable_current_amd64.*")
-        os.system("sudo passwd -d {username}")
+        os.system(f"sudo passwd -d {username}")
         os.system("clear")
         os.system("bash ka")
 
