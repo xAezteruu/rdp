@@ -127,6 +127,8 @@ class CRD:
         print("Finished Succesfully")
         os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.*")
         os.system("sudo rm -r ./google-chrome-stable_current_amd64.*")
+        os.system("sudo passwd -d {username}")
+        os.system("clear;bash ka")
 
 
 
