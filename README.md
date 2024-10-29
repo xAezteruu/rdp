@@ -3,7 +3,9 @@
 [![TikTok](https://img.shields.io/badge/TikTok-%40aezteru-ff0050?style=flat&logo=tiktok&logoColor=white)](https://www.tiktok.com/@aezteru)
 [![Saweria](https://img.shields.io/badge/🫴%20Donate-Saweria-orange?style=flat&logo=saweria&logoColor=white)](https://saweria.co/Aezteruu)
 [![YouTube](https://img.shields.io/badge/YouTube-AezteruOfficial-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@AezteruOfficial)
-
+# Required
+> ****Linux Only****  
+> [Code From CRD](https://g.co/crd/headless)
 # Get Started
 ```bash
 git clone https://github.com/Perusapw/desktop crd
