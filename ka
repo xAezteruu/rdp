@@ -1,5 +1,5 @@
 while true; do
    clear
-   curl -m 5 YOUR_GITHUB_CODESPACE_LINK_OR_GITPOD
+   curl -m 5 YOUR_GITHUB_CODESPACE_LINK
    sleep 300
 done
