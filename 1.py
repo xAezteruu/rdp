@@ -1,6 +1,6 @@
 username = "Aezteru"
 password = "root"
-Pin = 333333 #
+pin = "333333"
 
 import os
 import subprocess
@@ -115,7 +115,7 @@ class CRD:
     def finish(user):
         print("Finalizing")
         os.system(f"adduser {user} chro"+"me-re"+"mote-des"+"ktop")
-        command = f"{CRP} --pin={Pin}"
+        command = f"{CRP} --pin={pin}"
         os.system(f"su - {user} -c '{command}'")
         os.system("service chr"+"ome-re"+"mote-de"+"sktop start")
         print("Finished Succesfully")
