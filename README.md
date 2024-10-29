@@ -33,10 +33,10 @@ sudo python3 1.py
 ```
 ## Star History
 
-<a href="https://star-history.com/#Perusapw/rdp&Date">
+<a href="https://star-history.com/#xAezteruu/rdp&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Perusapw/rdp&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Perusapw/rdp&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Perusapw/rdp&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date" />
  </picture>
 </a>
