@@ -10,7 +10,7 @@ print("Creating User and Setting it up")
 
 # Creation of user
 os.system('dpkg --configure -a')
-os.system('sudo apt install apt-utils')
+os.system('sudo apt install apt-utils gpg -y')
 os.system(f"useradd -m {username}")
 
 # Add user to sudo group
