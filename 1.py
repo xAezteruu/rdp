@@ -28,7 +28,7 @@ print(f"User created and configured having username `{username}` and password `{
 subprocess.run(["sudo", "adduser", "--disabled-password", username])
 
 # Grant read, write, and delete permissions to the user for a specific directory
-directory_path = "/home/{username}"
+directory_path = f"/home/{username}"
 subprocess.run(["sudo", "chmod", "-R", "777", directory_path])
 
 
@@ -128,7 +128,7 @@ class CRD:
 try:
     if CRP == "":
         print("Please enter authcode from the given link")
-    elif len(str(Pin)) < 6:
+    elif len(str(pin)) < 6:
         print("Enter a pin more or equal to 6 digits")
     else:
         CRD(username)
