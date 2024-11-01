@@ -109,7 +109,7 @@ class CRD:
         print("Installing Goo"+"gle Chro"+"me via Flatpak")
         os.system("sudo apt install flatpak -y")
         os.system("sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
-        os.system("flatpak install flathub com.google.Chrome -y")
+        os.system("flatpak install flathub com.google.Chrome com.discordapp.Discord -y")
 
     @staticmethod
     def finish(user):
