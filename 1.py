@@ -110,6 +110,8 @@ class CRD:
         os.system("sudo apt install flatpak -y")
         os.system("sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
         os.system("flatpak install flathub com.google.Chrome com.discordapp.Discord -y")
+        os.system("wget -O vscode.deb https://update.code.visualstudio.com/latest/linux-deb-x64/stable")
+        os.system("sudo apt install ./vscode.deb -y")
 
     @staticmethod
     def finish(user):
@@ -120,7 +122,7 @@ class CRD:
         os.system("service chr"+"ome-re"+"mote-de"+"sktop start")
         print("Finished Succesfully")
         os.system(f"sudo mv .bashrc.example /home/{username}/.bashrc")
-        os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.*")
+        os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.* vscode.deb")
         os.system(f"sudo passwd -d {username}")
         os.system("clear")
         os.system("bash ka")
