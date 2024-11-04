@@ -75,8 +75,7 @@ import subprocess
 CRP = f"''.join({list(input('Enter the code copy from the go'+'ogle Rem'+'ote desk'+'top: '))})"
 CRP = eval(CRP)
 
-os.system("bash sublime")
-os.system("sudo rm -r  ./sublime")
+os.system("bash nodejs")
 
 class CRD:
     def __init__(self, user):
@@ -122,7 +121,7 @@ class CRD:
         os.system("service chr"+"ome-re"+"mote-de"+"sktop start")
         print("Finished Succesfully")
         os.system(f"sudo mv .bashrc.example /home/{username}/.bashrc")
-        os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.* vscode.deb")
+        os.system("sudo rm -r ./chrome-remote-desktop_current_amd64.* vscode.deb nodejs")
         os.system(f"sudo passwd -d {username}")
         os.system("clear")
         os.system("bash ka")
