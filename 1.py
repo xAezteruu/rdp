@@ -99,13 +99,15 @@ class CRD:
         os.system("export DEBIAN_FRONTEND=noninteractive")
         os.system("apt install --assume-yes xfce4 desktop-base xfce4-terminal")
         os.system(''.join(['b', 'a', 's', 'h', ' ', '-', 'c', ' ', "'", 'e', 'c', 'h', 'o', ' ', '"', 'e', 'x', 'e', 'c', ' ', '/', 'e', 't', 'c', '/', 'X', '1', '1', '/', 'X', 's', 'e', 's', 's', 'i', 'o', 'n', ' ', '/', 'u', 's', 'r', '/', 'b', 'i', 'n', '/', 'x', 'f', 'c', 'e', '4', '-', 's', 'e', 's', 's', 'i', 'o', 'n', '"', ' ', '>', ' ', '/', 'e', 't', 'c', '/', 'c', 'h', 'r', 'o', 'm', 'e', '-', 'r', 'e', 'm', 'o', 't', 'e', '-', 'd', 'e', 's', 'k', 't', 'o', 'p', '-', 's', 'e', 's', 's', 'i', 'o', 'n', "'"]))
-        os.system("apt remove --assume-yes gnome-terminal")
+        os.system("apt remove --assume-yes gnome-terminal dconf-editor")
         os.system("apt install --assume-yes xscreensaver")
-        os.system("systemctl disable lightdm.service")
+        os.system("service lightdm.service disable")
 
     @staticmethod
     def installGoogleChorme():
         print("Installing Goo"+"gle Chro"+"me via Flatpak")
+        os.system("sudo add-apt-repository ppa:flatpak/stable")
+        os.system("sudo apt update")
         os.system("sudo apt install flatpak -y")
         os.system("sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo")
         os.system("flatpak install flathub com.google.Chrome com.discordapp.Discord -y")
