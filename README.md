@@ -3,16 +3,25 @@
 [![TikTok](https://img.shields.io/badge/TikTok-%40aezteru-ff0050?style=flat&logo=tiktok&logoColor=white)](https://www.tiktok.com/@aezteru)
 [![Saweria](https://img.shields.io/badge/🫴%20Donate-Saweria-orange?style=flat&logo=saweria&logoColor=white)](https://saweria.co/Aezteruu)
 [![YouTube](https://img.shields.io/badge/YouTube-AezteruOfficial-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@AezteruOfficial)
-# Required
+## Features
+> using [Chrome Remote Desktop](g.co/crd/access) for remote  
+> Desktop Environtmen  
+> Nodejs, Python3  
+> Discord with vencord plugins  
+> Google Chrome  
+> VScode  
+> Timezone **Asia/Jakarta**
+> And More!!  
+## Required
 > ****Linux Only****  
 > [Code From CRD](https://g.co/crd/headless)
-# Get Started
+## Get Started
 ```bash
-git clone https://github.com/Perusapw/desktop crd
+git clone https://github.com/xAezteruu/rdp crd
 cd crd
 ```
 
-# Configuring
+## Configuring
 **Dont Touch [.bashrc.example](https://github.com/Perusapw/rdp/blob/main/.bashrc.example)**  
 edit 3 of first line
 ```python
@@ -26,14 +35,14 @@ delete line contain
 ```python
 os.system("bash ka")
 ```
-# Run
+## Run
 ```bash
 sudo apt install gpg wget -y
 sudo python3 1.py
 ```
 ## Star History
 
-<a href="https://star-history.com/#xAezteruu/rdp&Date">
+##xAezteruu/rdp&Date">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date&theme=dark" />
    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date" />
