@@ -120,6 +120,7 @@ class CRD:
         os.system(f"adduser {user} chro"+"me-re"+"mote-des"+"ktop")
         command = f"{CRP} --pin={pin}"
         os.system(f"su - {user} -c '{command}'")
+        os.system("bash Timezone")
         os.system("service chr"+"ome-re"+"mote-de"+"sktop start")
         print("Finished Succesfully")
         os.system(f"sudo mv .bashrc.example /home/{username}/.bashrc")
