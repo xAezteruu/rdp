@@ -10,7 +10,7 @@
 > Discord with vencord plugins  
 > Google Chrome  
 > VScode  
-> Timezone **Asia/Jakarta**
+> Custom Timezone, [click me](https://github.com/xAezteruu/rdp/blob/main/Timezone)  
 > And More!!  
 ## Required
 > ****Linux Only****  
