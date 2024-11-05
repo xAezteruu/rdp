@@ -42,10 +42,13 @@ sudo python3 1.py
 ```
 ## Star History
 
-##xAezteruu/rdp&Date">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date&theme=dark" />
    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date" />
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=xAezteruu/rdp&type=Date" />
  </picture>
 </a>
+
+# Supports
+
+[![Discord](https://img.shields.io/discord/857451895353507880?label=Discord&logo=discord&color=7289DA)](https://discord.gg/8BtzrWbdXx)
