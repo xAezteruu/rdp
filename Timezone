@@ -4,6 +4,4 @@ if [ "$EUID" -ne 0 ]; then
   echo "Please run as root"
   exit
 fi
-echo "Asia/Jakarta" > /etc/timezone
-dpkg-reconfigure -f noninteractive tzdata
-echo "Timezone has been set to: $(cat /etc/timezone)"
+sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
