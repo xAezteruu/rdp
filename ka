@@ -1,6 +1,3 @@
-sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
-
-
 while true; do
    clear
    curl -m 5 YOUR_GITHUB_CODESPACE_LINK
