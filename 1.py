@@ -43,26 +43,6 @@ with open(sudoers_file, "a") as file:
 # Output success message
 print(f"User '{username}' has been created and granted full permissions.")
 
-# Run the command with elevated privileges
-process = subprocess.Popen(['sudo', 'passwd'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
-# Enter the new password
-new_password = password
-process.stdin.write(new_password + '\n')
-
-# Re-enter the new password
-process.stdin.write(new_password + '\n')
-
-# Close the input stream
-process.stdin.close()
-
-# Wait for the process to complete
-process.wait()
-
-# Retrieve the output and error messages
-output = process.stdout.read()
-error = process.stderr.read()
-
 # Print the output and error messages
 print("Password updated successfully")
 
