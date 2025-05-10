@@ -77,11 +77,12 @@ class CRD:
     def installDesktopEnvironment():
         print("Installing Desktop Environment")
         os.system("export DEBIAN_FRONTEND=noninteractive")
-        os.system("apt install --assume-yes xfce4 desktop-base xfce4-terminal xfce4-clipman dconf-editor gnome-screenshot")
-        os.system(''.join(['b', 'a', 's', 'h', ' ', '-', 'c', ' ', "'", 'e', 'c', 'h', 'o', ' ', '"', 'e', 'x', 'e', 'c', ' ', '/', 'e', 't', 'c', '/', 'X', '1', '1', '/', 'X', 's', 'e', 's', 's', 'i', 'o', 'n', ' ', '/', 'u', 's', 'r', '/', 'b', 'i', 'n', '/', 'x', 'f', 'c', 'e', '4', '-', 's', 'e', 's', 's', 'i', 'o', 'n', '"', ' ', '>', ' ', '/', 'e', 't', 'c', '/', 'c', 'h', 'r', 'o', 'm', 'e', '-', 'r', 'e', 'm', 'o', 't', 'e', '-', 'd', 'e', 's', 'k', 't', 'o', 'p', '-', 's', 'e', 's', 's', 'i', 'o', 'n', "'"]))
+        os.system("apt install --assume-yes kubuntu-desktop sddm xscreensaver")
+        os.system("service lightdm stop")
+        os.system("sudo dpkg-reconfigure sddm")
+        os.system("service sddm start")
         os.system("apt remove --assume-yes gnome-terminal")
-        os.system("apt install --assume-yes xscreensaver")
-        os.system("service lightdm.service disable")
+        os.system("systemctl disable lightdm.service")
 
     @staticmethod
     def installGoogleChorme():
